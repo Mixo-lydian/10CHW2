@@ -15,4 +15,4 @@ Files in this repo:
 [main]: main.cpp
 [mainwindow.cpp]: mainwindow.cpp
 [mainwindow.h]: mainwindow.h
-[mainwindow.ui]: mainwindow.uisign
+[mainwindow.ui]: mainwindow.ui
