@@ -51,7 +51,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="classList">
        <item>
         <property name="text">
          <string>Program in Computing 10C                          </string>
@@ -129,14 +129,17 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_6">
      <item>
-      <widget class="QRadioButton" name="radioButton">
+      <widget class="QRadioButton" name="radioButton1">
        <property name="text">
         <string>Method 1 (All scores)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton_2">
+      <widget class="QRadioButton" name="radioButton2">
        <property name="text">
         <string>Method 2 (Drop midterm)</string>
        </property>
@@ -204,7 +207,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox_2">
+        <widget class="QSpinBox" name="spinBox_hw1">
          <property name="maximum">
           <number>100</number>
          </property>
@@ -224,7 +227,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox_3">
+        <widget class="QSpinBox" name="spinBox_hw2">
          <property name="maximum">
           <number>100</number>
          </property>
@@ -244,7 +247,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox">
+        <widget class="QSpinBox" name="spinBox_hw3">
          <property name="maximum">
           <number>100</number>
          </property>
@@ -496,7 +499,7 @@
   <connection>
    <sender>verticalSlider_3</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>spinBox_3</receiver>
+   <receiver>spinBox_hw2</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -510,7 +513,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>spinBox_3</sender>
+   <sender>spinBox_hw2</sender>
    <signal>valueChanged(int)</signal>
    <receiver>verticalSlider_3</receiver>
    <slot>setValue(int)</slot>
@@ -528,7 +531,7 @@
   <connection>
    <sender>verticalSlider</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>spinBox</receiver>
+   <receiver>spinBox_hw3</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -542,7 +545,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>spinBox</sender>
+   <sender>spinBox_hw3</sender>
    <signal>valueChanged(int)</signal>
    <receiver>verticalSlider</receiver>
    <slot>setValue(int)</slot>
@@ -656,7 +659,7 @@
   <connection>
    <sender>verticalSlider_4</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>spinBox_2</receiver>
+   <receiver>spinBox_hw1</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -670,7 +673,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>spinBox_2</sender>
+   <sender>spinBox_hw1</sender>
    <signal>valueChanged(int)</signal>
    <receiver>verticalSlider_4</receiver>
    <slot>setValue(int)</slot>
