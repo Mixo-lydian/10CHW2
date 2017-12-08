@@ -118,6 +118,32 @@
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>260</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="text">
+        <string>Method 1 (All scores)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="text">
+        <string>Method 2 (Drop midterm)</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
@@ -132,6 +158,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QSlider" name="verticalSlider_4">
+         <property name="maximum">
+          <number>100</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -289,7 +318,7 @@
         </spacer>
        </item>
        <item alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="label_mt1">
          <property name="text">
           <string>Midterm 1</string>
          </property>
@@ -309,7 +338,7 @@
         </spacer>
        </item>
        <item alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="label_mt2">
          <property name="text">
           <string>Midterm 2</string>
          </property>
@@ -329,7 +358,7 @@
         </spacer>
        </item>
        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="label_final">
          <property name="text">
           <string>Final</string>
          </property>
@@ -353,13 +382,25 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <widget class="QSpinBox" name="spinBox_5"/>
+        <widget class="QSpinBox" name="spinBox_mt1">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox_6"/>
+        <widget class="QSpinBox" name="spinBox_mt2">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox_4"/>
+        <widget class="QSpinBox" name="spinBox_final">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -367,6 +408,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QSlider" name="horizontalSlider_2">
+         <property name="maximum">
+          <number>100</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -374,6 +418,9 @@
        </item>
        <item>
         <widget class="QSlider" name="horizontalSlider_3">
+         <property name="maximum">
+          <number>100</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -381,6 +428,9 @@
        </item>
        <item>
         <widget class="QSlider" name="horizontalSlider">
+         <property name="maximum">
+          <number>100</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -393,24 +443,27 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>460</x>
       <y>330</y>
-      <width>135</width>
+      <width>149</width>
       <height>31</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
-      <widget class="QLabel" name="label_8">
+      <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>Final Score:</string>
+        <string>Calculate Score</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox_7">
+      <widget class="QDoubleSpinBox" name="doubleSpinBox">
        <property name="readOnly">
         <bool>true</bool>
+       </property>
+       <property name="maximum">
+        <double>100.000000000000000</double>
        </property>
       </widget>
      </item>
@@ -505,7 +558,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>spinBox_5</sender>
+   <sender>spinBox_mt1</sender>
    <signal>valueChanged(int)</signal>
    <receiver>horizontalSlider_2</receiver>
    <slot>setValue(int)</slot>
@@ -523,7 +576,7 @@
   <connection>
    <sender>horizontalSlider_2</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>spinBox_5</receiver>
+   <receiver>spinBox_mt1</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -537,7 +590,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>spinBox_6</sender>
+   <sender>spinBox_mt2</sender>
    <signal>valueChanged(int)</signal>
    <receiver>horizontalSlider_3</receiver>
    <slot>setValue(int)</slot>
@@ -555,7 +608,7 @@
   <connection>
    <sender>horizontalSlider_3</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>spinBox_6</receiver>
+   <receiver>spinBox_mt2</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -569,7 +622,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>spinBox_4</sender>
+   <sender>spinBox_final</sender>
    <signal>valueChanged(int)</signal>
    <receiver>horizontalSlider</receiver>
    <slot>setValue(int)</slot>
@@ -587,7 +640,7 @@
   <connection>
    <sender>horizontalSlider</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>spinBox_4</receiver>
+   <receiver>spinBox_final</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">

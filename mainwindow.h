@@ -12,14 +12,14 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    double compute_grade();
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
 signals:
-    void compute_overall();
 
 public slots:
-    void update_overall(int);
+    void update_overall();
 
 private:
     Ui::MainWindow *ui;
