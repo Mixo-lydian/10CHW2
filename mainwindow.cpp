@@ -20,20 +20,25 @@ double MainWindow::compute_grade() {
     double hw1 = (double)ui->spinBox_hw1->value();
     double hw2 = (double)ui->spinBox_hw2->value();
     double hw3 = (double)ui->spinBox_hw3->value();
+    double hw4 = (double)ui->spinBox_hw4->value();
+    double hw5 = (double)ui->spinBox_hw5->value();
+    double hw6 = (double)ui->spinBox_hw6->value();
+    double hw7 = (double)ui->spinBox_hw7->value();
+    double hw8 = (double)ui->spinBox_hw8->value();
     double mt1 = (double)ui->spinBox_mt1->value();
     double mt2 = (double) ui->spinBox_mt2->value();
     double final = (double)ui->spinBox_final->value();
     if (ui->classList->currentIndex() == 0) {
-        if (ui->radioButton1->isChecked()) return 0.25 * ((hw1 + hw2 + hw3) / 3) + 0.2 * (mt1 + mt2) + 0.35 * final;
+        if (ui->radioButton1->isChecked()) return 0.25 * ((hw1 + hw2 + hw3 + hw4 + hw5 + hw6 + hw7 + hw8) / 8) + 0.2 * (mt1 + mt2) + 0.35 * final;
         else if (ui->radioButton2->isChecked()) {
-            return 0.25 * ((hw1 + hw2 + hw3) / 3) + 0.3 * std::max(mt1, mt2) + 0.44 * final;
+            return 0.25 * ((hw1 + hw2 + hw3 + hw4 + hw5 + hw6 + hw7 + hw8) / 8) + 0.3 * std::max(mt1, mt2) + 0.44 * final;
         }
         else throw;
     }
     else if (ui->classList->currentIndex() == 1) {
-        if (ui->radioButton1->isChecked()) return 0.1 * ((hw1 + hw2 + hw3) / 3) + 0.4 * ((mt1 + mt2) / 2) + 0.5 * final;
+        if (ui->radioButton1->isChecked()) return 0.1 * ((hw1 + hw2 + hw3 + hw4 + hw5 + hw6 + hw7 + hw8) / 8) + 0.4 * ((mt1 + mt2) / 2) + 0.5 * final;
         else if (ui->radioButton2->isChecked()) {
-            return 0.1 * ((hw1 + hw2 + hw3) / 3) + 0.3 * std::max(mt1, mt2) + 0.6 * final;
+            return 0.1 * ((hw1 + hw2 + hw3 + hw4 + hw5 + hw6 + hw7 + hw8) / 8) + 0.3 * std::max(mt1, mt2) + 0.6 * final;
         }
         else throw;
     }
